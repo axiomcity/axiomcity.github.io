@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="container-media">
+    <head>
+        <!--
+            <meta name="viewport" content=="width=device-width, inital-scale=1.0">
+            -->  
+        <meta charset="utf-8" />
+        <title> Feedback</title>
+        <link rel="stylesheet" href="assets/styles-folder/styles.css">
+        <link rel="stylesheet" href="assets/styles-folder/feedback.css">
+		<link rel="icon" sizes="16x16" href="/images/logo.png">
+    </head>
+    <body>
+
+<!-- header-->
+        <header>
+            <nav>
+                <div id="navbar" class="navbar">
+                    <a id="ac" class="button" href="/Axiom-City.html" alt="axiom-city-menu">
+                    <img  src="images/logo2.png" style="max-height: 40px;">
+                    </a>
+                    <a class="button" href="a">sujet A</a>
+                    <a class="button" href="a">Sujet B</a>
+                    <a class="button" href="a">Sujet C</a>
+                    <a class="button" href="a">Sujet D</a>
+                    <a class="button" href="a">Sujet E</a>
+                </div>
+                <div>
+                <a id="burger" class="burger" role="button" data-target="#navbar-items">
+                <img style="max-height: 50px"  src="/images/burger01.png" alt="burger-img-open">
+                </a>
+                <div class="navbar-end">
+                </div>
+            </nav>
+        </header>
+
+
+<section class="introduction">
+<div>
+	<img src="/images/feedback.jpg" style="max-height: 128px;">
+	<h1>feedback page</h1>
+	<p>send feedback here</p>
+	<hr>
+</div>
+</section>
+
+        <section class="middlepage">
+            <div class="container">
+                <div class="column">
+
+<div class="coord">
+    <h2><strong>feedback page</strong></h2>
+    <p>enter your message in the following form.</p>
+    <form id="contact" class="formular" method="get" action="/back">
+    <div class="">
+        <label for="name"> put your name
+        <input required type="text" name="name" id="name">
+        </label><br>
+        <label for="email">put your email
+        <input required type="email" name="email" id="email">
+        </label><br><br>
+        <label for="message">put your mesage.
+        <textarea name="message" id="message"></textarea>
+        </label><br>
+    </div>
+        <div class="arrowdiv">
+		<p>Select a subject</p>
+            <select class="arrowstick">
+                <option>subject</option>
+                <option>hiring</option>
+                <option>meeting</option>
+                <option>feedback</option>
+            </select>
+	<label for="send">
+	<input class="arrowend" type="submit" name="send" id="send" value="Submit">
+	</label>
+        </div>
+
+	</form>
+</div>
+
+
+<form class="insideoftheform" method="get" action="" id="contact">
+    <div class="column search-sidebar">
+        <div>
+            <input required class="is-button search-bar" name="search" type="text" id="search" placeholder="Enter search term">
+        </div>
+        <div>
+            <input class="is-button search-button" type="submit" value="Search">
+        </div>
+    </div>
+    <span>new</span>
+    <ul>
+        <li><a href="https://addons.mozilla.org/fr/firefox">How to use Firefox</a></li>
+        <li><a href="https://linux.how2shout.com/how-to-install-qemu-kvm-on-ubuntu-22-04-20-04-lts">Install QEMU on Linux</a></li>
+    </ul>
+    <span>Links for me</span>
+    <ul>
+        <li><a href="https://check.torproject.org/?lang=fr">Tor Check</a></li>
+        <li><a href="https://crispy.cat/">CrispyCat friend</a></li>
+        <li><a href="https://archlinux.org/packages">I use Arch btw</a></li>
+    </ul>
+</form>
+</div>
+</div>
+</section>
+<!-- footer -->
+        <footer>
+		<section>
+	<p>Hello im the footer text.</p>
+        </section>
+        </footer>
+    </body>
+</html>
