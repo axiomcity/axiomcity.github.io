@@ -30,6 +30,11 @@ body {
 	margin: 0;
 }
 
+img {
+	max-width: 300px;
+
+}
+
 /* balises de bases */
 header {
     background-color: #002b40;
@@ -65,18 +70,16 @@ h1 {
 p {
         margin: 24px;
 }
+
 footer {
         color: #0080bf;
         background: #001520;
-
-}
-footer * {
-        color: #0080bf;
-        margin-left: 12%;
+		margin-bottom: 0;
+		text-align: center;
 }
 
 section {
-    padding: 3rem 3rem;
+    padding: 0rem 3rem;
     margin-bottom: 50px;
 
 }
@@ -110,12 +113,10 @@ a {
 }
 
 .burger {
-    max-height: 75px;
     color: #bfeaff;
     background-color: #002B40;
     padding: 0rem 0.75rem;
     text-decoration: none;
-    height: 40px;
     align-items: center;
     display: none;
 }
@@ -148,7 +149,6 @@ select {
 
 }
 .button {
-        max-height: 75px;
         color: #bfeaff;
         background-color: #002B40;
         padding: 0rem 0.75rem;
@@ -201,8 +201,9 @@ select {
     color: #80d5ff;
     list-style: none;
     padding: 25px;
+	height: 1%;
     box-shadow: 0 0.5em 1em -0.125em rgba(0,64,96,0.1),0 0px 0 1px rgba(0,64,96,0.02);
-}   
+}
 
 .insideoftheform a {
     color: #80d5ff;

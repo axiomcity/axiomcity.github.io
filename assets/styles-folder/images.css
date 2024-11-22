@@ -1,0 +1,29 @@
+img {
+	max-width: 200px;
+
+}
+
+.footer {
+	margin: 3%;
+
+}
+
+.out {
+display: flex;
+  flex-direction: row-reverse;
+  text-align: center;
+  padding: 3%;
+  justify-content: space-between;
+}
+
+.imagebaord {
+	display: grid;
+	gap: 2%;
+	padding: 2%;
+}
+
+.conteneur {
+	display: grid;
+	grid-template-columns: 200px 200px 200px;
+	gap: 20px;
+}
