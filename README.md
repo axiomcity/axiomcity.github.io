@@ -1,11 +1,9 @@
 # axiomcity.fr
 <a  href="https://axiomcity.fr">
-  <img src="https://github.com/axiomcity/axiomcity.github.io/blob/main/images/mascotte.png">
+  <img src="https://github.com/axiomcity/axiomcity.github.io/blob/main/images/mascotte.png" style="height: 550px; "><br>
 </a> 
-# Bonjour c'est David BERGER ! &emsp;  <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="40px">
-
-<img src="https://github.com/dabergery/dabergery/blob/main/images/face.gif" width="900px">
-### Comment me retrouver sur les réseaux
+<br><hr><br>
+### Comment me retrouver sur les réseaux<br>
 <a  href="https://www.youtube.com/@calculus-youtube">
   <img src="https://img.shields.io/badge/@calculusyoutube-%231572B6.svg?&style=for-the-badge&logo=youtube&logoColor=white">
 </a> 
