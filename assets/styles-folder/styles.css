@@ -126,6 +126,10 @@ a {
     cursor: pointer;
 }
 
+.burger:active {
+	
+
+}
 
 /* element sidebar */
 input,
@@ -222,8 +226,12 @@ select {
     text-transform: uppercase;
     font-style: revert;
     font-weight: normal;
-    
+	width: auto;    
 }
+
+.width {
+    width: 100%;
+    max-width: 100%;
 
 @media screen and (max-width: 1023px) {
         nav .button {
@@ -249,3 +257,18 @@ select {
                 width: 120px;
         }
 }
+
+@media screen and (min-width: 769px), print {
+  .columns:not(.is-desktop) {
+    display: flex;
+
+.width {
+	width: 100%;
+	max-width: 65%;
+
+}
+  }
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
