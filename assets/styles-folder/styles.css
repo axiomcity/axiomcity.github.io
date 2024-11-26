@@ -1,3 +1,6 @@
+/* assets/styles-folder/styles.css */
+
+/* ##################### default */
 * {
 	box-sizing: inherit;
 	text-decoration: none;
@@ -35,7 +38,10 @@ img {
 
 }
 
+<<<<<<< HEAD
 /* balises de bases */
+=======
+>>>>>>> c581072 (envoielasource)
 header {
     background-color: #002b40;
 	color: #bfeaff;
@@ -44,7 +50,6 @@ header {
 nav {
         display: flex;
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
 
 }
@@ -57,11 +62,9 @@ hr {
 }
 a {
         color: #80d5ff;
-        font-size: 0.75em;
-        letter-spacing: 0.1em;
         font-style: revert;
         font-weight: normal;
-
+  font-size: 0.75em;
 }
 h1 {
         font-size: 3rem;
@@ -95,15 +98,9 @@ section {
 }
 
 
-/* element navbar*/
-#navbar {
-background-color: #002B40;
-  color: #BDEBF9;
-  align-items: center;
-  display: flex;
+/* ################ element navbar*/
 
-} 
-a {
+.insideoftheform a {
         color: #80d5ff;
         font-size: 0.75em;
         letter-spacing: 0.1em;
@@ -112,18 +109,75 @@ a {
 
 }
 
+<<<<<<< HEAD
 .burger {
+=======
+.icon {
+>>>>>>> c581072 (envoielasource)
     color: #bfeaff;
     background-color: #002B40;
     padding: 0rem 0.75rem;
     text-decoration: none;
     align-items: center;
-    display: none;
+    display: flex;
 }
 
-.burger:hover {
-    background-color: #001A26;
-    cursor: pointer;
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+
+}
+
+.topnav {
+  overflow: hidden;
+  position: relative;
+} 
+
+.topnav #myLinks {
+display: flex;
+  flex-direction: row;
+  
+}
+
+.topnav a {
+  text-decoration: none;
+width: 5000px;
+}
+
+.topnav a.icon {
+  display: flex;
+  position: absolute;
+  right: 0; 
+  top: 0;
+    background-color: #002B40;
+    
+}   
+
+.topnav a.icon:hover {
+  background-color: #00263B;
+  
+} 
+
+.active {
+  background-color: #002b40;
+  color: #59A5ce;
+  
+} 
+
+.logo {
+padding: 8px;
+width: auto;
+}
+
+.logo:hover {
+background-color: #001A26;
+cursor: pointer;
+
+
 }
 
 .burger:active {
@@ -131,7 +185,14 @@ a {
 
 }
 
-/* element sidebar */
+.topnav a {
+font-size: 1em;
+  letter-spacing: 0.1em;
+	font-size: 0.75em;
+	display: flex;
+}
+
+/* ################## element sidebar */
 input,
 textarea,
 select {
@@ -154,7 +215,7 @@ select {
 }
 .button {
         color: #bfeaff;
-        background-color: #002B40;
+        background-color: #001520;
         padding: 0rem 0.75rem;
         text-decoration: none;
         height: 56px;
@@ -162,7 +223,8 @@ select {
         display: flex;
 }
 .button:hover {
-        background-color: #001A26;
+        color: #0AF;
+		background-color: #00121D;
         cursor: pointer;
 }
 .is-button {
@@ -229,6 +291,11 @@ select {
 	width: auto;    
 }
 
+<<<<<<< HEAD
+=======
+
+/* ############## Mobile */
+>>>>>>> c581072 (envoielasource)
 .width {
     width: 100%;
     max-width: 100%;
@@ -243,8 +310,8 @@ select {
 
         }
 
-        nav .burger {
-                display: flex;
+        nav .icon {
+                display: none;
 
         }
 
@@ -272,3 +339,7 @@ select {
 
 *, ::before, ::after {
   box-sizing: inherit;
+<<<<<<< HEAD
+=======
+
+>>>>>>> c581072 (envoielasource)
