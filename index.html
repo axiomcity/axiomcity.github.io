@@ -5,37 +5,44 @@
 		<meta content='width=device-width, initial-scale=1' name='viewport'/>
 		<title> Axiom City</title>
         <link rel="stylesheet" href="assets/styles-folder/styles.css">
-        <link rel="stylesheet" href="assets/styles-folder/Axiom-City.css">
         <link rel="icon" sizes="16x16" href="/images/logo.png">
     </head>
     <body>
-        <header>
+<header>
             <nav>
-                <div id="navbar" class="navbar">
-                    <a id="ac" class="button" href="/index.html" alt="axiom-city-menu">
-                    <img  src="images/logo2.png" style="max-height: 40px;">
-<<<<<<< HEAD
-                    </a>
-                    <a class="button" href="photos.html">Images</a>
-=======
-					</a>
-					<a class="button" href="photos.html">Images</a>
->>>>>>> c581072 (envoielasource)
-                    <a class="button" href="treeknowledges.html">Tree knowledges</a>
-                    <a class="button" href="builds.html">Builds</a>
-                    <a class="button" href="a">Sujet D</a>
-                    <a class="button" href="a">Sujet E</a>	
+                <div id="navbar" class="topnav">
+                    <a id="ac" class="logo" href="/index.html" alt="axiom-city-menu">
+                    <img  src="images/logo2.png" style="max-height: 40px;"></a>
+                    <div id="myLinks">
+                        <a class="button" href="index.html">Menu</a>
+                        <a class="button" href="chatroom.html">Chat Room</a>
+                        <a class="button" href="graphs.html">Graphiques</a>
+                        <a class="button" href="builds.html">Constructions</a>
+                        <a class="button" href="photos.html">Images</a>
+                    </div>
                 </div>
                 <div>
-                <a id="burger" class="burger" role="button" data-target="#navbar-items">
-				<img style="max-height: 56px"  src="/images/burger01.png" alt="burger-img-open">	
-                </a>
-                <div class="navbar-end">
+                    <a href="javascript:void(0);" onclick="myFunction()">
+                    <img style="max-height: 56px"  src="/images/burger01.png" alt="burger-img-open">
+                    </a>
                 </div>
             </nav>
+            <!-- Script Burger Menu -->
+            <script>
+                function myFunction() {
+                  var x = document.getElementById("myLinks");
+                  if (x.style.display === "flex") {
+                    x.style.display = "none";
+                  } else {
+                    x.style.display = "flex";
+                    x.style.flexDirection = "column";
+                x.style.backgroundColor = "#001520"
+                }
+                }
+            </script>
         </header>
+
 <!-- script is here -->
-<script type="text/javascript" src="assets/js-folder/burger.js"></script>
         <section class="introduction">
             <div>
                 <img src="/images/logo3.png" style="max-height: 128px;" >
@@ -54,39 +61,18 @@
                         <p>The online privacy start when you decide to no more send metadata on the web. And BTW this sentence need ot bee long enought to nicely adjust the sidebar on the Right.</p>
                         <a href="/feedback.html" alt="contact-me-link" >Send me feedback.</a>
                     </div>
-                    <!-- thesidemenuishere-->
-                    <form class="insideoftheform" method="get" action="" id="contact">
-                        <div class="column search-sidebar">
-                            <div>
-                                <input required class="is-button search-bar" name="search" type="text" id="search" placeholder="Enter search term">
-                            </div>
-                            <div>
-                                <input class="is-button search-button" type="submit" value="Search">
-                            </div>
-                        </div>
-                        <span>new</span>          
-                        <ul>
-                            <li><a href="https://addons.mozilla.org/fr/firefox">How to use Firefox</a></li>
-                            <li><a href="https://linux.how2shout.com/how-to-install-qemu-kvm-on-ubuntu-22-04-20-04-lts">Install QEMU on Linux</a></li>
-                        </ul>
-                        <span>Links for me</span>
-                        <ul>
-                            <li><a href="https://check.torproject.org/?lang=fr">Tor Check</a></li>
-                            <li><a href="https://crispy.cat/">CrispyCat friend</a></li>
-                            <li><a href="https://archlinux.org/packages">I use Arch btw</a></li>
-                        </ul>
-                    </form>
-                </div>
-            </div>
         </section>
         <footer>
-            <section>
-                <a href="https://github.com/dabergery/linux">A cool way to learn coding is to use Linux.</a>
-                <div class="smallfont">
-                i have a small font
-                <div>
+            <section class="footer">
+                <div class="out">
+                    <img style="max-height: 128px"  src="/images/mascotte.png" alt="mascotte">
+                    <small><a href="https://crispy.cat">CrispyCat friend</a></small>
+                    <small><a href="https://github.com/blender/matrix.to">
+                    How i discover matrix network</a></small>
+                    <a href="https://coinmarketcap.com">coinmarketcap</a>
                 </div>
-            </section>
-        </footer>
+                <small>Copyright 2024 - David Berger</small>
+            </section>        
+		</footer>
     </body>
 </html>

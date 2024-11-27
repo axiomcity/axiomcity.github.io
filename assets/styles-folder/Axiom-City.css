@@ -1,4 +1,5 @@
-nWav {
+nav {
+    color: #002B40;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -74,18 +75,6 @@ footer * {
 
 }
 
-
-.button {
-	max-height: 75px;
-	color: #bfeaff;
-	background-color: #002B40;
-	padding: 0rem 0.75rem;
-	text-decoration: none;
-	height: 56px;
-	align-items: center;
-	display: flex;
-}
-
 .button:hover {
 	background-color: #001A26;
 	cursor: pointer;
@@ -109,27 +98,4 @@ footer * {
 	cursor: pointer;
 }
 
-@media screen and (max-width: 1023px) {
-	nav .button {
-		display: none;
-	}
 
-	#ac {
-		display: flex;
-
-	}
-
-	nav .burger {
-		display: flex;
-
-	}
-
-	form {
-		width: 200px;
-
-	}
-
-	#search {
-		width: 120px;
-	}
-}

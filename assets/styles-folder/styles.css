@@ -1,6 +1,5 @@
-/* assets/styles-folder/styles.css */
+/* styles.css */
 
-/* ##################### default */
 * {
 	box-sizing: inherit;
 	text-decoration: none;
@@ -18,7 +17,7 @@ footer,
 aside,
 section {
 	display: block;
-
+	background-color: #000B10;
 }
 
 body {
@@ -38,10 +37,8 @@ img {
 
 }
 
-<<<<<<< HEAD
+
 /* balises de bases */
-=======
->>>>>>> c581072 (envoielasource)
 header {
     background-color: #002b40;
 	color: #bfeaff;
@@ -61,7 +58,7 @@ hr {
 
 }
 a {
-        color: #80d5ff;
+        color: #0AF;
         font-style: revert;
         font-weight: normal;
   font-size: 0.75em;
@@ -97,29 +94,24 @@ section {
 
 }
 
+.footer {
+	margin: 3%;
+	padding: 3%;
+}
 
-/* ################ element navbar*/
-
-.insideoftheform a {
-        color: #80d5ff;
-        font-size: 0.75em;
-        letter-spacing: 0.1em;
-        font-style: revert;
-        font-weight: normal;
+.out {
+display: flex;
+  flex-direction: row-reverse;
+  text-align: center;
+  padding: 3%;
+  justify-content: space-between;
 
 }
 
-<<<<<<< HEAD
-.burger {
-=======
-.icon {
->>>>>>> c581072 (envoielasource)
-    color: #bfeaff;
-    background-color: #002B40;
-    padding: 0rem 0.75rem;
-    text-decoration: none;
-    align-items: center;
-    display: flex;
+/* ################ element navbar*/
+#ac {
+        display: flex;
+
 }
 
 .mobile-container {
@@ -138,8 +130,8 @@ section {
 } 
 
 .topnav #myLinks {
-display: flex;
-  flex-direction: row;
+	display: none;
+	flex-direction: column;
   
 }
 
@@ -180,16 +172,17 @@ cursor: pointer;
 
 }
 
-.burger:active {
-	
-
-}
-
 .topnav a {
 font-size: 1em;
   letter-spacing: 0.1em;
 	font-size: 0.75em;
 	display: flex;
+}
+
+.icon {
+max-height: 56px;
+  padding-right: 5px;
+  display: flex;
 }
 
 /* ################## element sidebar */
@@ -215,8 +208,8 @@ select {
 }
 .button {
         color: #bfeaff;
-        background-color: #001520;
-        padding: 0rem 0.75rem;
+		background-color: #002B40;        
+		padding: 0rem 0.75rem;
         text-decoration: none;
         height: 56px;
         align-items: center;
@@ -291,27 +284,18 @@ select {
 	width: auto;    
 }
 
-<<<<<<< HEAD
-=======
+/* Mobile */
 
-/* ############## Mobile */
->>>>>>> c581072 (envoielasource)
 .width {
     width: 100%;
     max-width: 100%;
+}
 
 @media screen and (max-width: 1023px) {
-        nav .button {
-                display: none;
-        }
-
-        #ac {
-                display: flex;
-
-        }
-
         nav .icon {
-                display: none;
+				max-height: 40px;
+  				padding-right: 8px;
+                display: flex;
 
         }
 
@@ -325,21 +309,4 @@ select {
         }
 }
 
-@media screen and (min-width: 769px), print {
-  .columns:not(.is-desktop) {
-    display: flex;
-
-.width {
-	width: 100%;
-	max-width: 65%;
-
-}
-  }
-}
-
-*, ::before, ::after {
-  box-sizing: inherit;
-<<<<<<< HEAD
-=======
-
->>>>>>> c581072 (envoielasource)
+/* styles.css */
