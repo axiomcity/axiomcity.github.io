@@ -79,7 +79,6 @@ footer {
 }
 
 section {
-    padding: 0rem 3rem;
     margin-bottom: 50px;
 
 }
@@ -200,7 +199,7 @@ select {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
     margin-top: 1.75rem;
-
+	width: 80%;
 }
 .searchbar {
     border-radius: 4px;
@@ -256,6 +255,7 @@ select {
 }
 
 .insideoftheform {
+	max-width: 300px;
     background-color: #001520;
     color: #80d5ff;
     list-style: none;
@@ -284,6 +284,19 @@ select {
 	width: auto;    
 }
 
+#main {
+	padding: 0rem 3rem;	
+
+}
+
+.insideoftheform {
+	padding: 1rem 3rem;
+	margin: 50px;
+
+
+}
+
+
 /* Mobile */
 
 .width {
@@ -307,6 +320,17 @@ select {
         #search {
                 width: 120px;
         }
+
+		.column {
+		display: block;
+
+}
+		.insideoftheform {
+  margin: 0px;
+  width: 100%;
+
+}
+
 }
 
 /* styles.css */
