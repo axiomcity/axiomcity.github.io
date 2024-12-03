@@ -1,6 +1,6 @@
 # axiomcity.fr
 <a  href="http://axiomcity.fr">
-  <img src="https://github.com/axiomcity/axiomcity.github.io/blob/main/images/mascotte.png" style="height: 550px; "><br>
+  <img src="https://github.com/axiomcity/axiomcity.github.io/blob/main/images/m/009.png" style="height: 550px; "><br>
 </a> 
 <br><hr><br>
 ### Comment me retrouver sur les réseaux<br>
