@@ -299,9 +299,6 @@ select {
 
 /* Mobile */
 
-.width {
-    max-width: 100%;
-}
 
 @media screen and (max-width: 1023px) {
         nav .icon {
