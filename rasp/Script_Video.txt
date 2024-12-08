@@ -1,0 +1,197 @@
+################# Partie 01 Introduction
+deroulement de la video
+
+Bonjour a tous, aujourdui nous allons voir semble,
+comment contruire une station meteo.
+
+Animation d'introduction
+
+()
+
+Initialement j'ai imaginé ce projet car j'avais envie de construire ma propre sonde meteoorlogique
+le but etant d'avoir un flux d'information meteo en temps reel et accesible hors ligne.
+oui je sait un thermometre coche parfaitement ces 2 conditions, mais bon pourquoi pas creer sa propre station météo ?
+
+Ainsi durant l'avancement de ce projet j'ai appris enormement de choses, et je voulais aussi vous partager 
+l'avancement de ce projet, les problemes auquelles j'ai fait face, en realisant cette station météo.
+
+Allez commencont sans plus attendre.
+
+()
+
+Pour imaginer un scneario de construiction d'une sonde météo il faut avoir un raspberrypi
+et j'ai choisi le modele ZERO 2W car il pese a peine 10 g, et est equipé d'une puce Wifi 2.4 GHz.
+malheuresement je me suis rendu compte plus tard que ce ne serai pas le modele le plus simple pour réussir ce projet.
+Car pour que l'echange d'information fonctionne il fallait au moins 2 carte réseaux, la carte native + une carte dongle USB qui sera la deuxieme carte réseau.
+et ceci n'est pas possible sans adaptateur micro USB sur celui que j'ai choisi...
+Donc j'ai cherché une solution a ce probleme et j'ai trouvé, en creer un script qui creer la deuxieme carte mais virtuelle cette fois ci l'echange pourra fonctionner.
+
+Donc pour transmettre les informations meteorlogique de la sonde vers notre télephone, il faudra utiliser le logiciel nommé RaspAP qui est un logiciel Open source.
+RaspAP sert a transformer n'importe quel appreil en PA wifi, très simplement.
+
+Pour que l'echange fonctionne il faudra mettre le raspberry en mode AP/STA : https://docs.raspap.com/ap-sta/
+
+################# Partie 02 installation de PiOS
+Partie 1 Carte SD )
+- Telecharger rpi-imager puis extraire l'archive.
+- Selectionner le modele RaspberryPI correspondant, dans mon cas RPI ZERO 2W.
+- Choisir le système d'exploitation PiOS Lite 64 bits.
+- Selectrionner le stockage valider, puis confirmer, edit settings, definir le hostname, mot de passe par default
+raspberrypi/pi, et choisir votre reseau wifi 2.4GHz, activer ssh, enregistrer, appliquer et flasher la carte SD.
+Partie 2 SSH )
+- Depuis un PC ouvrir une console CLI, taper ping raspberrypi.local, puis ssh pi@raspberrypi.local
+( note )
+Si vous voyez "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!"
+tapez rm ~\.ssh\known_hosts*
+puis ssh pi@raspberrypi.local
+
+
+################# Partie 03 Configuration reseau
+1) preparer l'interface reseau client/uap0
+
+# Mise a jour necessaire du systeme
+sudo apt update && sudo apt upgrade -y
+# verifier si L’interface peut fonctionner en mode "managed" (client WiFi)
+iw list | grep -A 10 "valid interface combinations"
+# Creer un script bash pour monter la carte reseau virtuelle a chaque redemarrage.
+sudo nano /opt/uap0.sh
+
+(
+#!/bin/bash
+
+sudo iw dev wlan0 interface add uap0 type __ap
+sleep 1
+sudo ifconfig uap0 10.3.141.1 netmask 255.255.255.0 up
+clear
+echo "uap0 creation de l'interface virtuelle..."
+ip a | grep inet
+echo "Demarrage du point d'acces Wifi en cours..."
+sleep 1
+sudo systemctl restart dnsmasq
+sudo systemctl restart hostapd
+sudo systemctl status hostapd
+)
+
+# Activer le service rc.local
+sudo systemctl enable rc-local.service
+# redemarrer
+sudo reboot
+# Editer le fichier rc.local pour ajouter le script uap0.
+sudo nano /etc/rc.local
+
+(
+/opt/uap0.sh
+)
+
+
+############# Partie 04 Installation et configuration du logiciel RaspAP
+(
+curl -sL https://install.raspap.com | bash
+Installation directory: /var/www/html? [Y/n]:
+Enter
+Complete installation with these values? [Y/n]:
+Enter
+
+3) modifier les fichiers de configurations
+
+sudo nano /etc/hostapd.conf
+(
+wpa_passphrase=Complex@01
+ssid=mon-nouveau-wifi
+#interface=wlan0
+interface=uap0
+)
+
+sudo nano /etc/dnsmasq.conf
+(
+# Indiquer a dnsmasq d'ecouter sur les deux reseaux.
+interface=wlan0
+interface=uap0
+# Associer une IP a un appareil.
+dhcp-host=<XX.XX.XX.XX.XX>,<AlicePC>,<IP>
+)
+
+
+
+########## Partie 05 configuration du Capteur BME 680
+Pour vous procurer le capteur BME680 vous pouvez vous tournez vers ces trois fournisseurs suivant :
+- pimoroni un producteur indépendant basé au Royaume-Unis qui ont produit des tutoriels de très bonne qualité et pour tous publique en lien avec le capteur BME680.
+- Adafruit une startup New-Yorkais qui s'est emparé du BME680 de BOSCH pour créer leur carte Adafruit BME680.
+- et ensuite il ya le modèle noname BME680-CJMCU qu'on trouve pour pas cher sur amazon, eBay et un peu partout.
+
+https://shop.pimoroni.com/products/adafruit-bme680-temperature-humidity-pressure-and-gas-sensor-stemma-qt
+https://www.adafruit.com/product/3660
+https://www.amazon.com/CJMCU-680-Temperature-Humidity-Ultra-Small-Development/dp/B07K1CGQTJ
+
+le capteur arrive en deux pieces detaché, on va donc devoir souder a l'etain les 6 ports du capteur BME680, puis les 40 du raspberry.
+
+
+
+######## Partie 06 configuration des LEDs
+ici j'ai suivi un schema de branchement en ajoutant une resisitant par canal de couleur et la masse qui servira a fermer le circuit electrique est celui ci que je suis en train de toucher qui est relié a la masse du RaspberryPI
+ensuite pour tester que tout fonctionne je lance un scirpt Python3.O  que j'ai trouvé sur internet 
+on va maintenant configurer le capteur de temperature (a filmer)
+
+
+Partie reparation de la LED
+allez on lance le script.. punaise de punaise la connectique est tres mal soudé, on va mettre une 2eme couche pour voir.
+video x5 >>>
+VOila déjà la vous voyez que la lampe s'est allumé
+ensuite on va lancer le script qui allume une couleur par couleur: rouger vert bleu et blanc ! ensuite on verifie si l'ordre correspond bien a ce que le script a envoyé, Voyons voir <lire le terminal et constater que c'est juste> ca m'a l'air tout bon !
+
+
+ ############## il faudrait configurer la carte reseau en filmant en direct et surtout constamment expliquer ce qu'on sa'appreet a faire et decrire ce qu'on voit poru etre sur que tout le monde comprend.
+Partie Réseau et conception
+la station météo peut fonctionner en autonomie si on lui connecte une batterie externe.
+extremement lègere et donc portable, accesible sur un réseau wifi privé pair a pair.
+
+Le micro ordinateur embarque une carte wifi ayant une vitesse theorique de 11.9Mo/s download et 16.9Mo/s en upload.
+la station meteo sera accesible par le wifi donc tout appareil equipé d'une carte wifi compatble 2GHz, pourra s'y connecter en recherchant son SSID.
+portée du signal WiFi ???
+pour le soft on a utlisé RaspAP, comme la ocnfiguration minimal nécessitais 2 cartes réseau, on en a créée une virtuelle sur la base de la première, avec ifconfig.
+
+raspap
+  |
+   ---> wlan0
+  |
+   -----> uap0
+
+ensuite il fallais configurer les option du point d'access Wifi mot de passe nom du SSID.
+comme il y avais beaucoup de modification a faire dans les fichier de conf et que beaucoup d'erreurs provienne d'ici en général, j'ai exporté les paramètres systèmes lié aux services réseaux comme le DHCP, DNS, la carte reseau etc mais aussi la version de RaspAP, si la carte principale est en bridge ou pas, les IPs des deux reseaux etc.. tout ce beau monde dans un fichier de log qui est enregistré sur mon PC, et que je peut re-generer en 1 clique.
+
+enfaite je doit dire que j'ai plus passé des mois a debugger les problèmes reseau sur ce mini ordinateur.
+pour gagner du temps, et aussi parce envie, je travaillais sur ce projet le soir apres 23h00. jusqu'à ce que je sent queje commence a perdre completement ma concentration.
+
+oui mes nuits ressemblais plus a ca, je me connecte a partir de 23h00, ensuite je reprend ou je m'etais arreté la veille
+donc pour configurer le point d'acces, je regarde des tonnes de tuto YouTube, mais mon point d'acces ne se lance pas.
+un fichier de conf n'etais pas bon voir meme pluseiur.
+ensuite viens la partie Scripting python pour interagir avec le capteur BME 680.
+
+
+Partie interface Web.
+prérequis pour se connecter a l'interface web conf + dongle ? temps d'attente si il est etein
+entrer le nom de domaine qui redirige sur l'interface d'admin de l'AP. comme si c'etais une borne Wifi.
+indiquer le sidentifiant de connexion.
+une fois connecté au panneau d'administration de la borne rappeler quel parametre on cherche a change avant de faire quoi que ce soit s'aider de ce qui est affiché a l'ecran, verifier la connetivité avec le reseau domicile.
+entrer dans la page de configuration du hotspot, et changer le carte reseau qui fera hotspot, enuiste changer le mot de passe, puis changer le country code puis enregistrer.
+une 
+Ensuite viens la partie configuration du serveur mosquitto.
+
+partie Debugging
+probleme:le lorsqu'on se connecte au point d'acces wifi on recoit une address APIPA.
+resolution:dnsmasq fait DHCP et serveur de cache DNS, qui accepte les requetes DNS et peut y repondre depuis un petit cache local ou y transferer a un réel serveur DNS recursif. le serveur dnsmasq DHCP supporte l'assignation d'addresse static et plusieurs réseaux.
+
+Eteindre le point d'acces.
+aller a l'ip du raspberry PI
+s'idnetifier sur l'AP
+aller dans l'onglet system, puis cliquez sur shutdown,puis valider dans l'info-bulle shutdown.
+
+##########################
+ Bosch BME680 Sensor Tutorial 
+https://www.youtube.com/watch?v=Etm4fL8gE2k
+
+ Raspberry Pi Travel Router - RaspAP (2024)
+https://www.youtube.com/watch?v=3PvDqb66Rw4
+
+ INIU Batterie Externe, 22.5W 10000mAh
+https://www.amazon.fr/INIU-Batterie-10500mAh-Chargeur-T%C3%A9l%C3%A9phone/dp/B08JTQ66K7
