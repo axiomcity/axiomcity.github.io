@@ -1,0 +1,63 @@
+
+---
+```css
+
+body {
+	background-color: orange;
+
+}
+
+section {
+  font-family: 'Roboto', sans-serif;
+  background-color: #001520;
+  color: #e5e5e5;
+  padding: 2rem;
+}
+
+h1, h2, h3 {
+  color: #bfeaff;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+code {
+  background-color: #333333;
+  color: #76b900;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+pre code {
+  background-color: #292929;
+  color: #76b900;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+ul {
+  margin-left: 1.5rem;
+}
+
+footer {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #888888;
+position: absolute;
+  top: 670px;
+  left: 1044px;
+}
+
+header {
+  color: #888888;
+  font-size: 1.2rem;
+}
+
+img {
+  max-width: 50%;
+  border-radius: 6px;
+}
