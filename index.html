@@ -1,108 +1,91 @@
 <!DOCTYPE html>
 <html class="container-media">
-    <head>
-        <meta charset="utf-8" />
-		<meta content='width=device-width, initial-scale=1' name='viewport'/>
-		<title> Axiom City</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" sizes="16x16" href="icon.png">
-    </head>
-    <body>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content='width=device-width, initial-scale=1' name='viewport' />
+    <title> Axiom City</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" sizes="16x16" href="icon.png">
+    <script src="script.js"></script>
+</head>
+
+<body>
 <header>
-            <nav>
-                <div id="navbar" class="topnav">
-                    <a href="javascript:void(0);" onclick="myFunction()" id="ac" class="logo" alt="axiom-city-menu">
-                    <img  src="logo2.png" style="max-height: 56px;"></a>
-                    <div id="myLinks">
-                        <a class="button" href="index.html">Menu</a>
-                        <a class="button" href="chatroom.html">Discussions</a>
-                        <a class="button" href="profil.html">Portfolio</a>
-                        <a class="button" href="builds.html">Projets</a>
-                        <a class="button" href="photos.html">Bibliothèque</a>
-                    </div>
-                </div>
-                <div>
-                    <a href="javascript:void(0);" onclick="myFunction()">
-                    <img style="max-height: 50px"  src="burger-icon.png" alt="burger-img-open">
-                    </a>
-                </div>
-            </nav>
-            <!-- Script Burger Menu -->
-            <script>
-                function myFunction() {
-                  var x = document.getElementById("myLinks");
-                  if (x.style.display === "flex") {
-                    x.style.display = "none";
-                  } else {
-                    x.style.display = "flex";
-                    x.style.flexDirection = "column";
-                x.style.backgroundColor = "#001520"
-                }
-                }
-            </script>
-        </header>
+    <nav>
+        <div class="navbar">
+            <div>
+                <a href="javascript:void(0);" onclick="myFunction()" class="logo" alt="axiom-city-menu">
+                    <img src="logo2.png" class="logo" ></a>
+            </div>
+            <a class="logo">Login</a>
+            <div>
+                <a href="javascript:void(0);" onclick="myFunction()">
+                    <img class="logo" style="max-height: 56px" src="burger-icon.png" alt="burger-img-open">
+                </a>
+            </div>
+        </div>
+        <div id="myLinks">
+            <a class="button" href="index.html">Menu</a>
+            <a class="button" href="chatroom.html">Discussions</a>
+            <a class="button" href="profil.html">Portfolio</a>
+            <a class="button" href="builds.html">Projets</a>
+            <a class="button" href="photos.html">Bibliothèque</a>
+        </div>
+
+    </nav>
+</header>
 
 <!-- script is here -->
-        <section class="introduction">
-            <div>
-                <h1>Page AxiomCity<br>David BERGER</h1>
-                <p>Salut à tous, je vous souhaite la bienvenue sur mon site web.
+<section class="introduction">
+    <div>
+        <h1>Page AxiomCity<br>David BERGER</h1>
+        <p>Salut à tous, je vous souhaite la bienvenue sur mon site web. J'ai été étudiant a l’école Supérieure ISITECH Lyon ayant travaillé en tant que technicien support je me suis réorienté dans le developpement web. Je peux vous donner quelques de mes impressions et conseils dans le milieu ;) Thème : Graphisme, Tuto Communication, Web Design, Textile et Montage Vidéo.
+        <p>
+        <hr>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div id="bio">
+                <a class="startup" href="/index.html">Axiom City / </a> Axiom City main Hello I am 22 years old, I live in the Rhône with my 6 cats.
+                </p>
 
-                    J'ai été étudiant a l’école Supérieure ISITECH Lyon ayant travaillé en tant que technicien support je me suis réorienté dans le developpement web.
-
-                    Je peux vous donner quelques de mes impressions et conseils dans le milieu ;)
-
-                    Thème : Graphisme, Tuto Communication, Web Design, Textile et
-                    Montage Vidéo.
                 <p>
-                <hr>
+                    I like to make artistics things such as drawing, composing music, taking photos. I also like to play video games.
+                </p>
+
+                <p>
+                    I've study cumputer science in a vocational high school in computer science in Lyon, then I did a BTS as an IT support technician. With the basics knowledges of IT and my transferable skills, today i can work anywhere where in a IT job, and this is a good news 'cause i want to travel all around the world.
+                </p>
+
+                <p>
+                    and i also work on personnal project too like building an <a href="https://unsigned.io/articles/2022_01_27_rnode-with-anything.html" alt="Yagi antenna unsigned.io">Yagi antenna </a>for fun and profit.
+                </p>
+                <a href="/feedback.html" alt="contact-me-link">Send me feedback.</a>
             </div>
-        </section>
-        <section class="section">
-            <div class="container">
-                <div class="columns">
-                    <div id="bio">
-                        <a class="startup" href="/index.html">Axiom City / </a> Axiom City main
-				Hello I am 22 years old, I live in the Rhône with my 6 cats.
-			</p>
-
-			<p>
-				I like to make artistics things such as drawing, composing music, taking photos.
-				I also like to play video games.
-			</p>
-
-			<p>
-				I've study cumputer science in a vocational high school in computer science in Lyon,
-				then I did a BTS as an IT support technician.
-				With the basics knowledges of IT and my transferable skills, today i can work anywhere where in a IT job, and this is a good news 'cause i want to travel all around the world.
-			</p>
-
-			<p>
-				and i also work on personnal project too like building an <a href="https://unsigned.io/articles/2022_01_27_rnode-with-anything.html" alt="Yagi antenna unsigned.io">Yagi antenna </a>for fun and profit.
-			</p>
-                        <a href="/feedback.html" alt="contact-me-link" >Send me feedback.</a>
+            <!-- thesidemenuishere-->
+            <form class="insideoftheform" method="get" action="" id="contact">
+                <div class="column search-sidebar">
+                    <div>
+                        <input required class="is-button search-bar" name="search" type="text" id="bar" placeho>
+                        <input id="search" class="is-button search-button" type="submit" value="Search">
                     </div>
-<!-- thesidemenuishere-->
-                    <form class="insideoftheform" method="get" action="" id="contact">
-                        <div class="column search-sidebar">
-                            <div>
-                                <input required class="is-button search-bar" name="search" type="text" id="bar" placeho>
-                                <input id="search" class="is-button search-button" type="submit" value="Search">
-                            </div>
-                        <span>Search</span>
-                            <hr>
-                            text
-                            <hr>
-                    </form>
-                </div>
-            </div>
-        </section>
+                    <span>Search</span>
+                    <hr> text
+                    <hr>
+            </form>
+        </div>
+    </div>
+</section>
 
-        <footer>
-            <section class="footer">
+<footer>
+    <section class="footer">
 
-				<small>Copyright 2024 - David Berger</small>
-            </section>        
-		</footer>
-    </body>
+        <small>Copyright 2024 - David Berger</small>
+    </section>
+</footer>
+</body>
+
 </html>
