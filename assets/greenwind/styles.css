@@ -1,0 +1,403 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+a:hover {
+    color: #64CEA8;
+
+}
+
+.page {
+    background: #FFF;
+    box-shadow: #111 0px 0px 10px;
+    box-sizing: border-box;
+    margin: 20px 40px auto;
+    font-family: "Nico Moji", sans-serif;
+    max-width: 1200px;
+    margin: 20px auto;
+    font-size: 18px;
+
+}
+
+.logo_greenwind {
+    height: 50%;
+    width: 50%;
+}
+
+.container_social {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.flex {
+    display: flex;
+    margin-left: auto;
+    gap: 8px;
+    align-items: center;
+
+}
+
+.gap {
+    gap: 32px;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFF;
+    box-shadow: #555555 0px 1px 8px;
+    padding: 0 2%;
+
+}
+
+.links {
+    justify-content: space-between;
+    padding: 1% 3%;
+
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+}
+
+.colored_h1 {
+    color: #64CEA8;
+}
+.colored_h2 {
+    color: #46836d;
+}
+
+h1 {
+    padding-top: 5%;
+    color: #333;
+}
+h2, .p1, .p2 {
+    padding-top: 5%;
+    color: #666;
+
+}
+
+.eolienne_green {
+    max-width: 100%;
+}
+
+.p1 {
+    color: #333;
+}
+
+.p2 {
+    color: #666;
+}
+
+.links_navbar {
+    display: block;
+    white-space: nowrap;
+}
+
+.burger_menu {
+    display: none;
+}
+
+.fiche {
+    padding: 0 5%;
+}
+
+.bg_container {
+    position: relative;
+    text-align: center;
+}
+
+.bg_section {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.button_bg_01 {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    color: white;
+    width: auto;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+.button_bg_02 {
+    position: absolute;
+    top: 10%;
+    left: 39%;
+    color: white;
+    width: auto;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+.float_image_01 {
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    width: 25%;
+}
+
+.titles {
+    position: absolute;
+    top: 10%;
+    left: 12%;
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.shape_container {
+    text-align: left;
+
+}
+
+.shape_outside {
+    float: right;
+    shape-outside: url("https://raw.githubusercontent.com/Studidavidberger/studidavidberger.github.io/refs/heads/main/Assets/img/kit.png");
+    width: 550px;
+    margin-right: 5%;
+}
+
+.button_element {
+    display: flex;
+    margin: 5% 54%;
+    white-space: nowrap;
+}
+
+.cap {
+    text-transform: uppercase;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+}
+
+
+
+.container_graph {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: row;
+}
+
+.data {
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.data img {
+    max-width: 150px;
+}
+
+.box {
+    display: block;
+    justify-content: center;
+    padding-top: 100px;
+
+}
+
+.button_white {
+    margin: 16px !important;
+    text-decoration: none;
+    background: #ccc;
+    padding: 5px 15px;
+    border-radius: 35px;
+    text-align: center;
+    color: #000;
+    font-family: "Nico Moji", sans-serif;
+
+}
+
+.button_white:hover {
+    background: #000;
+    color: #f44f88;
+    outline: 1px solid white;
+}
+
+.button_rose {
+    margin: 16px !important;
+    text-decoration: none;
+    background: #f44f88;
+    padding: 5px 15px;
+    border-radius: 35px;
+    text-align: center;
+    color: #FFF;
+    font-family: "Nico Moji", sans-serif;
+    font-weight: bold;
+
+}
+
+.button_rose:hover {
+    outline: #000 solid 1px;
+    color: #ffd0c7;
+}
+
+.button_green {
+    margin: 16px !important;
+    background: #64CEA8;
+    padding: 5px 15px;
+    border-radius: 35px;
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+    font-family: "Nico Moji", sans-serif;
+    font-weight: bold;
+
+}
+
+.button_green:hover {
+    outline: #000 solid 1px;
+    color: #b9fbe5;
+
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container_boutique {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: break-spaces;
+    padding: 40px;
+
+}
+
+.container_boutique img {
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 15%;
+}
+
+.inscription, .inscription h1 {
+    text-align: left;
+    color: white;
+    background: #483;
+    padding: 4%;
+}
+
+.pile {
+    text-align: left;
+    color: white;
+    background: #483;
+    padding: 6%;
+    position: absolute;
+    z-index: 1;
+    left: 10%;
+    width: 80%;
+    bottom: -5%;
+}
+
+.container_inscription {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    margin: 20px;
+    padding-right: 40px;
+}
+
+footer {
+    background: #303735;
+    color: #9c9a9a;
+    padding: 4%;
+    padding-top: 50%;
+}
+
+.container_footer {
+    position: relative;
+    top: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    justify-content: center;
+}
+
+.section_padding {
+    padding: 5%;
+    padding-bottom: 50%;
+}
+
+@media (max-width: 800px) {
+    .grid3 {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .bg_section {
+        height: 300px;
+        width: 100%;
+    }
+    .clear {
+        flex-direction: column;
+    }
+    .container_graph {
+        display: block;
+    }
+    .illustration {
+        bottom: 0;
+    }
+    .links_navbar {
+        display: none;
+    }
+    .burger_menu {
+        display: block;
+    }
+    .shape_outside {
+        max-width: 75%;
+    }
+    .button_element {
+        white-space: wrap;
+        margin: 0;
+    }
+    .titles {
+        top: 2%;
+        left: 5%;
+    }
+    .button_bg_01 {
+        top: 15%;
+    }
+    .button_bg_02 {
+        top: 8%;
+        left: 20%;
+
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .page.adaptive {
+        background: #19250a;
+        color: #dcb;
+        outline: 5px dashed #000;
+    }
+}
