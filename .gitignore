@@ -2,3 +2,10 @@
 node_modules/
 dist/
 build/
+.parcel-cache
+
+# swp files
+*.swp
+
+# Webstorm
+.idea
