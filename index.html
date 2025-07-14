@@ -18,9 +18,9 @@
                 <a href="javascript:void(0);" onclick="myFunction()" class="logo" alt="axiom-city-menu">
                     <img src="logo2.png" class="logo" ></a>
             </div>
-            <a class="logo">Login</a>
-            <div>
-                <a href="javascript:void(0);" onclick="myFunction()">
+            <div class="rightitems">
+                <a class="logo nav-btn">Login</a>
+                <a href="javascript:void(0);" onclick="burger1()">
                     <img class="logo" style="max-height: 56px" src="burger-icon.png" alt="burger-img-open">
                 </a>
             </div>
@@ -38,11 +38,28 @@
 
 <!-- script is here -->
 <section class="introduction">
-    <div>
-        <h1>Page AxiomCity<br>David BERGER</h1>
-        <p>Salut à tous, je vous souhaite la bienvenue sur mon site web. J'ai été étudiant a l’école Supérieure ISITECH Lyon ayant travaillé en tant que technicien support je me suis réorienté dans le developpement web. Je peux vous donner quelques de mes impressions et conseils dans le milieu ;) Thème : Graphisme, Tuto Communication, Web Design, Textile et Montage Vidéo.
-        <p>
-        <hr>
+    <div class="presentation">
+        <div>
+            <h1>Page AxiomCity<br>David BERGER</h1>
+        </div>
+        <form class="fly" action="/">
+            <img src="assets/icon/search.png" alt="">
+            <input class="flyme searchbar" type="text" placeholder="Articles names or Keywords..." name="search">
+            <input class="flyme search" type="submit" value="Search">
+            <a href="javascript:void(0);" onclick="burger2()">
+                <img class="logo" style="max-height: 56px" src="burger-icon.png" alt="burger-img-open">
+            </a>
+            <div id="topics" class="topics">
+                <a href="/">salut</a>
+                <a href="/">salut</a>
+                <a href="/">salut</a>
+            </div>
+        </form>
+
+    </div>
+    <p>Salut à tous, je vous souhaite la bienvenue sur mon site web. J'ai été étudiant a l’école Supérieure ISITECH Lyon ayant travaillé en tant que technicien support je me suis réorienté dans le developpement web. Je peux vous donner quelques de mes impressions et conseils dans le milieu ;) Thème : Graphisme, Tuto Communication, Web Design, Textile et Montage Vidéo.
+    <p>
+    <hr>
     </div>
 </section>
 <section class="section">
@@ -65,17 +82,7 @@
                 </p>
                 <a href="/feedback.html" alt="contact-me-link">Send me feedback.</a>
             </div>
-            <!-- thesidemenuishere-->
-            <form class="insideoftheform" method="get" action="" id="contact">
-                <div class="column search-sidebar">
-                    <div>
-                        <input required class="is-button search-bar" name="search" type="text" id="bar" placeho>
-                        <input id="search" class="is-button search-button" type="submit" value="Search">
-                    </div>
-                    <span>Search</span>
-                    <hr> text
-                    <hr>
-            </form>
+
         </div>
     </div>
 </section>
