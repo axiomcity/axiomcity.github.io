@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>game wesite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+<h1>game website</h1>
+
+<p>bonjour !</p>
+
+<h2>Language : <span class="lang-info" id="lang-info">fr</span></h2>
+
+<div  class="vid-container" id="vid-container">
+    <h2>Titre de la video</h2>
+    <video src="demo-fr.mp4" id="vid-content" class="vid-content" controls></video>
+
+    <p> description de la video</p>
+
+    <select id="lang-select" class="btn-lang" onchange="vid_lang()">
+        <option value="en">English</option>
+        <option value="de">German</option>
+        <option value="ru">Russian</option>
+        <option value="fr" selected="selected">French</option>
+    </select>
+
+</div>
+
+
+
+
+</body>
+</html>

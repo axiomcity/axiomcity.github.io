@@ -4,6 +4,16 @@
     box-sizing: inherit;
     text-decoration: none;
     list-style: none;
+    cursor: url("cursor.png"), auto;
+}
+
+a {
+    cursor: url("cursor.png"), auto;
+
+}
+
+a:hover, input:hover {
+    cursor: url("pointer.png"), auto;
 }
 
 html {
@@ -127,7 +137,7 @@ section {
     cursor: pointer;
 }
 
-#myLinks {
+#burger {
     display: none;
     flex-direction: column;
 
@@ -135,6 +145,10 @@ section {
 
 .rightitems {
     display: flex;
+}
+
+.nav-btn {
+    padding: 8px 20px;
 }
 
 .logo {
@@ -147,14 +161,9 @@ section {
     color: #bfeaff;
 }
 
-.nav-btn {
-    padding: 8px 20px;
-}
-
 .logo:hover {
     background-color: #001A26;
-    cursor: pointer;
-
+    cursor: url("pointer.png"), auto;
 
 }
 
@@ -178,13 +187,16 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: auto;
+    width: 500px;
+    height: 100px;
 }
 
 .flyme {
+    display: flex;
+    flex-direction: row;
     font-size: 16px;
     font-weight: 500;
-    height: 72px;
+    height: 60px;
     padding: 0 20px;
     border: none;
     color: #bfeaff;
@@ -193,8 +205,21 @@ section {
 
 }
 
+.flyit {
+    padding: 8px;
+    width: auto;
+    height: 56px;
+    color: #bfeaff;
+}
+
+.flyit:hover {
+    background-color: #001A26;
+    cursor: url("pointer.png"), auto;
+
+}
+
 .searchbar {
-    width: 250px;
+    width: 220px;
 }
 
 .search {
@@ -204,6 +229,7 @@ section {
 .topics {
     display: none;
     flex-direction: column;
+    justify-content: center;
 }
 
 #bio {
@@ -211,6 +237,67 @@ section {
     max-width: 70%;
     padding: 3% 5%;
 
+}
+
+.btn_shadow {
+    max-height: 30px;
+    position: relative;
+    top: 10px;
+    box-shadow: 5px 10px 5px #000;
+}
+
+.btn_shadow:hover {
+    border-radius: 5px;
+    outline: 5px solid #fff;
+    cursor: url("pointer.png"), auto;
+}
+
+.accessibility {
+    font-weight: 500;
+    font-size: 20px;
+    box-shadow: 0px 0px 50px #002B40;
+    border-radius: 15px;
+    background: #001520;
+    padding: 15px;
+    width: auto;
+    display: none;
+}
+
+.colors {
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 15px;
+    padding: 30px;
+    background: #001520;
+    color: #bfeaff;
+    border: none;
+}
+
+.colors:hover {
+    background: #000B12;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+}
+
+@keyframes anim_levitate {
+    from {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.animation {
+    animation-name: anim_levitate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 
 

@@ -1,0 +1,84 @@
+/*
+
+STEP 1 Creer une keyframe portant un nom qui decrit l'animation, ainsi que
+les coordonnée de l'element a animer.
+
+STEP 2 Creer une classe contenant les parametres de l'animation.
+
+KEYFRAME=COORDONNÉE DE L'ANIMATION
+CLASSE=PARAMETRES DE L'ANIMATION
+
+*/
+
+@keyframes  spinning {
+    from {
+        transform: rotateZ(360deg);
+    }
+
+    to {
+        transform: rotateY(0);
+    }
+}
+
+@keyframes lefttoright {
+    from {
+        transform: translateX(50px);
+    }
+
+    to {
+        transform: translateX(-50px);
+    }
+    
+}
+.animation {
+    animation-name: spinning;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-delay: 0s;
+    cursor: crosshair;
+}
+
+
+.delay-2 {
+    animation-delay: 1s;
+
+}
+
+.delay-1 {
+    animation-delay: 2s;
+
+}
+
+.animation-slow {
+    animation-duration: 3s;
+}
+
+.animation-medium {
+    animation-duration: 2s;
+}
+.animation-fast {
+    animation-duration: 1s;
+}
+
+.animation:hover {
+    animation-duration: .3s;
+}
+
+.sliding {
+    animation-name: lefttoright;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+
+    transform: translateX(-150px);
+}
+
+.sliding:hover {
+    animation-duration: 1s;
+}

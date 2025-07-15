@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="container-media">
+<html id="site" class="container-media">
 
 <head>
     <meta charset="utf-8" />
@@ -7,7 +7,7 @@
     <title> Axiom City</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" sizes="16x16" href="icon.png">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -15,17 +15,17 @@
     <nav>
         <div class="navbar">
             <div>
-                <a href="javascript:void(0);" onclick="myFunction()" class="logo" alt="axiom-city-menu">
+                <a href="javascript:void(0);" onclick="ft_burger()" class="logo" alt="axiom-city-menu">
                     <img src="logo2.png" class="logo" ></a>
             </div>
             <div class="rightitems">
                 <a class="logo nav-btn">Login</a>
-                <a href="javascript:void(0);" onclick="burger1()">
-                    <img class="logo" style="max-height: 56px" src="burger-icon.png" alt="burger-img-open">
+                <a href="javascript:void(0);" onclick="ft_burger()">
+                    <img class="logo" src="burger.png" alt="burger-img-open">
                 </a>
             </div>
         </div>
-        <div id="myLinks">
+        <div id="burger">
             <a class="button" href="index.html">Menu</a>
             <a class="button" href="chatroom.html">Discussions</a>
             <a class="button" href="profil.html">Portfolio</a>
@@ -42,14 +42,15 @@
         <div>
             <h1>Page AxiomCity<br>David BERGER</h1>
         </div>
-        <form class="fly" action="/">
-            <img src="assets/icon/search.png" alt="">
-            <input class="flyme searchbar" type="text" placeholder="Articles names or Keywords..." name="search">
-            <input class="flyme search" type="submit" value="Search">
-            <a href="javascript:void(0);" onclick="burger2()">
-                <img class="logo" style="max-height: 56px" src="burger-icon.png" alt="burger-img-open">
-            </a>
-            <div id="topics" class="topics">
+        <form class="" action="/">
+            <div class="fly">
+                <img src="assets/icon/search.png" alt="">
+                <input class="flyme searchbar" type="text" placeholder="Articles names or Keywords..." name="search">
+                <input class="flyme search" type="submit" value="Search">
+                <a href="javascript:void(0);" onclick="ft_burger2()"> <img class="flyme" src="burger.png" alt="b"> </a>
+                <br>
+            </div>
+            <div id="burger2" class="topics">
                 <a href="/">salut</a>
                 <a href="/">salut</a>
                 <a href="/">salut</a>
@@ -66,6 +67,37 @@
     <div class="container">
         <div class="columns">
             <div id="bio">
+                <p> Accessibilité
+                    <a href="javascript:void(0);" onclick="ft_accessibility()">
+                        <img class="animation btn_shadow" src="block.png" alt="a">
+                    </a>
+
+                <div id="accessibility" class="accessibility">
+                    <p>Réglages couleurs</p>
+                    <a id="protanopie" href="javascript:void(0);" onclick="ft_setStyle(protanopie)">
+                        <input class="blind_button colors" type="button" value="Protanopie">
+                    </a>
+                    <a id="deuteranopie" href="javascript:void(0);" onclick="ft_setStyle(deuteranopie)">
+                        <input class="blind_button colors" type="button" value="Deuteranopie">
+                    </a>
+                    <a id="tritanopie" href="javascript:void(0);" onclick="ft_setStyle(tritanopie)">
+                        <input class="blind_button colors" type="button" value="Tritanopie">
+                    </a>
+                    <a id="achromatopsie" href="javascript:void(0);" onclick="ft_setStyle(achromatopsie)">
+                        <input  class="blind_button colors" type="button" value="Achromatopsie">
+                    </a>
+                    <a id="remover" href="javascript:void(0);" onclick="ft_setStyle(remover)">
+                        <input  class="blind_button colors" type="button" value="Default">
+                    </a>
+                    <hr>
+                <div class="center">
+                    <input class="center" type="range" id="slurp" min="0" max="255" value="128">
+                    <span> Contrast : <span id="slurp_numb">Err</span></span>
+                </div>
+
+                </div>
+                <br>
+
                 <a class="startup" href="/index.html">Axiom City / </a> Axiom City main Hello I am 22 years old, I live in the Rhône with my 6 cats.
                 </p>
 
