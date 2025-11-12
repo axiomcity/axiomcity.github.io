@@ -77,3 +77,50 @@ function ft_setStyle (style) {
     // Met a jour le Cookie d'accessiblité
     localStorage.setItem('style', site.style.filter);
 }
+
+// SEARCH API
+async function searchArticles() {
+    const query = document.getElementById('search').value;
+    const resultsElement = document.getElementById('results');
+    resultsElement.innerHTML = ''; // Vider les résultats précédents
+
+    if (query.length === 0) return; // Ne rien faire si la requête est vide
+
+    try {
+        const response = await fetch(`http://localhost:3000/users?search=${query}`);
+        if (!response.ok) {
+            throw new Error('Erreur de réseau');
+        }
+        const articles = await response.json();
+        
+        articles.forEach(article => {
+            // Créer un nouvel élément div pour chaque article
+            const resultDiv = document.createElement('div');
+            resultDiv.className = 'result';
+            
+            // Créer un lien
+            const link = document.createElement('a');
+            link.href = '/';  // Changez ceci pour le bon lien selon votre besoin
+            
+            // Créer l'image
+            const img = document.createElement('img');
+            img.src = 'assets/resulat_01.png';  // L'image de l'article
+            img.alt = `Résultat ${article.id}`;  // Texte alternatif
+            
+            // Créer le paragraphe
+            const paragraph = document.createElement('p');
+            paragraph.textContent = article.name;  // Remplacer par le champ approprié
+            
+            // Construire la structure
+            link.appendChild(img);
+            resultDiv.appendChild(link);
+            resultDiv.appendChild(paragraph);
+            
+            // Ajouter le nouveau div au conteneur des résultats
+            resultsElement.appendChild(resultDiv);
+        });
+    } catch (error) {
+        console.error('Erreur:', error);
+        resultsElement.innerHTML = '<p>Erreur lors de la récupération des articles.</p>';
+    }
+}

@@ -22,7 +22,7 @@ section {
 }
 
 body {
-    font-family: "Source Sans Pro","Open Sans",Verdana,sans-serif;
+    font-family: "Source Sans Pro", "Open Sans", Verdana, sans-serif;
     display: flex;
     font-size: 1em;
     font-weight: 200;
@@ -53,6 +53,7 @@ hr {
     margin: 10px;
 
 }
+
 a {
     color: #0AF;
     font-style: revert;
@@ -60,7 +61,8 @@ a {
     font-size: 0.75em;
 }
 
-a:hover, input:hover {
+a:hover,
+input:hover {
     cursor: url("pointer.png"), auto;
 }
 
@@ -119,7 +121,7 @@ h1 {
 p {
     margin: 24px;
     font-weight: 500;
-    font-size:  24px;
+    font-size: 24px;
 }
 
 footer {
@@ -177,6 +179,7 @@ section {
     align-items: center;
     display: flex;
 }
+
 .button:hover {
     color: #0AF;
     background-color: #00121D;
@@ -225,21 +228,17 @@ section {
     align-items: center;
 }
 
-.fly {
-    box-shadow: 0px 0px 50px #002B40;
+.cont-api {
+    justify-content: space-around;
+    box-shadow: 0px 0px 30px #006495;
     border-radius: 25px;
-    background: #001520;
-    padding: 5%;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    width: 500px;
-    height: 100px;
+    padding: 3%;
+    position: relative;
 }
 
-.flyme {
-    display: flex;
-    flex-direction: row;
+.api-text {
     font-size: 16px;
     font-weight: 500;
     height: 60px;
@@ -247,44 +246,51 @@ section {
     border: none;
     color: #bfeaff;
     background: #001520;
-    border-radius: 15px;
-
 }
 
-.flyit {
-    padding: 8px;
-    width: auto;
-    height: 56px;
-    color: #bfeaff;
+.api-text:hover {
+    opacity: .8;
 }
 
-.flyit:hover {
-    background-color: #001A26;
-    cursor: url("pointer.png"), auto;
-
+.api-btn {
+    background: transparent;
+    border: none;
 }
 
-.searchbar {
-    width: 220px;
+.api-btn:hover {
+    opacity: .8;
 }
 
-.search {
-    background: #000B12;
-}
-
-.topics {
-    display: none;
+.cont-result {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    position: absolute;
+    top: 70px;
+    left: -21px;
+    width: 85%;
 }
 
-#bio {
-    padding-left: 1rem;
-    max-width: 70%;
-    padding: 3% 5%;
+.result {
+    display: flex;
+    padding: 4px;
 
 }
 
+.result:hover {
+    outline: auto;
+
+}
+
+.result img {
+    height: 64px;
+}
+
+.result p {
+    font-size: 11px;
+
+}
+
+/* ACCESSIBLITY */
 .btn_shadow {
     max-height: 30px;
     position: relative;
@@ -390,11 +396,11 @@ section {
         right: 41%;
     }
 
-    .mascotte001{
+    .mascotte001 {
         left: 90px;
     }
 
-    .mascotte002{
+    .mascotte002 {
         left: 100px;
         top: -224px;
 
@@ -404,6 +410,7 @@ section {
         display: block;
 
     }
+
     .insideoftheform {
         margin: 0px;
         width: 80%;

@@ -1,0 +1,24 @@
+{
+  "name": "axiomcity",
+  "version": "1.0.0",
+  "description": "<a href=\"https://axiomcity.github.io/\"> <img src=\"https://github.com/axiomcity/axiomcity.github.io/blob/main/planete_01.png\"> </a>",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axiomcity/axiomcity.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axiomcity/axiomcity.github.io/issues"
+  },
+  "homepage": "https://github.com/axiomcity/axiomcity.github.io#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  }
+}
