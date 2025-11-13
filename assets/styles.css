@@ -263,10 +263,9 @@ p {
 
 }
 
-
 .access-btn {
     height: 30px;
-    z-index: 2;
+    z-index: 5;
     position: absolute;
     box-shadow: 5px 10px 5px #000;
     right: 30px;
@@ -457,8 +456,24 @@ p {
     .banner-title {
         font-size: 10px;
     }
+
     .cont-result {
         width: 100%;
     }
 
+    .access {
+        transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        height: 200px;
+        z-index: 3;
+        position: relative;
+    }
+
+    .access-hidden {
+        height: 0;
+        opacity: 0;
+    }
+    .access-btn {
+        top: 50px;
+        right: 50px
+    }
 }
