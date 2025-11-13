@@ -6,7 +6,7 @@
     <meta content='width=device-width, initial-scale=1' name='viewport' />
     <title> Axiom City</title>
     <link rel="stylesheet" href="assets/styles.css">
-    <link rel="icon" sizes="16x16" href="icon.png">
+    <link rel="icon" sizes="16x16" href="assets/img/icon/icon.png">
     <script src="assets/script.js" defer></script>
 </head>
 
@@ -15,31 +15,78 @@
         <nav>
             <div class="navbar">
                 <div>
-                    <a href="index.html" class="logo" alt="axiom-city-menu">
-                        <img src="logo2.png" class="logo"></a>
-                </div>
-                <div class="rightitems">
-                    <a class="logo nav-btn">Login</a>
-                    <a href="javascript:void(0);" onclick="ft_burger()">
-                        <img class="logo" src="assets/img/icon/burger.png" alt="burger-img-open">
+                    <a href="index.html" alt="axiom-city-menu">
+                        <img class="icon" src="logo2.png">
                     </a>
                 </div>
+                <div class="links">
+                    <a class="link" href="langues.html">Langues</a>
+                    <a class="link" href="profil.html">Portfolio</a>
+                    <a class="link" href="builds.html">Projets</a>
+                    <a class="link" href="photos.html">Bibliothèque</a>
+                    <a class="link" class="">Login</a>
+                </div>
+                <a class="burger" class="link" href="javascript:void(0);" onclick="ft_links()">
+                    <img class="icon" src="assets/img/icon/burger.png" alt="burger-img-open">
+                </a>
             </div>
-            <div id="burger">
-                <a class="button" href="langues.html">Langues</a>
-                <a class="button" href="profil.html">Portfolio</a>
-                <a class="button" href="builds.html">Projets</a>
-                <a class="button" href="photos.html">Bibliothèque</a>
-            </div>
+            <div class="cont-access">
+                <a href="javascript:void(0);" onclick="ft_access()">
+                    <img class="access-anim access-btn" src="assets/img/icon/block.png" alt="a">
+                </a>
+                <div class="access">
+                    <p>Réglages couleurs</p>
+                    <a id="protanopie" href="javascript:void(0);" onclick="ft_setStyle(protanopie)">
+                        <input class="blind_button colors" type="button" value="Protanopie">
+                    </a>
+                    <a id="deuteranopie" href="javascript:void(0);" onclick="ft_setStyle(deuteranopie)">
+                        <input class="blind_button colors" type="button" value="Deuteranopie">
+                    </a>
+                    <a id="tritanopie" href="javascript:void(0);" onclick="ft_setStyle(tritanopie)">
+                        <input class="blind_button colors" type="button" value="Tritanopie">
+                    </a>
+                    <a id="achromatopsie" href="javascript:void(0);" onclick="ft_setStyle(achromatopsie)">
+                        <input class="blind_button colors" type="button" value="Achromatopsie">
+                    </a>
+                    <a id="remover" href="javascript:void(0);" onclick="ft_setStyle(remover)">
+                        <input class="blind_button colors" type="button" value="Default">
+                    </a>
+                    <hr>
+                    <div class="center">
+                        <input class="center" type="range" id="slurp" min="0" max="255" value="128">
+                        <span> Contrast : <span id="slurp_numb">Err</span></span>
+                    </div>
 
+                </div>
+            </div>
         </nav>
     </header>
 
     <section class="introduction">
-        <div class="presentation">
-            <div>
+        <div class="banner">
+            <div class="banner-title">
                 <h1>Page AxiomCity<br>David BERGER</h1>
             </div>
+            <div class="banner-text">
+                <p>Salut à tous, je vous souhaite la bienvenue sur mon site web.</p>
+                <p>Diplomé de l’école Supérieure <a href="https://2iacademy.com/campus-lyon/">ISITECH</a> Lyon, j'ai
+                    travaillé en tant que technicien support en alternance chez
+                    <a href="https://lbint.fr/">LBINT</a>.
+                </p>
+                <p>Puis voulant me lancer dans l'auto entreprenariat je me suis réorienté dans le developpement avec les
+                    formations d'OpenClassroom et Studi.</p>
+                <p>Je peux vous donner quelques de mes impressions et conseils dans le milieu ;) Thème : Graphisme, Tuto
+                    Communication, Web Design, Textile et Montage Vidéo. </p>
+                <p>Sur mon temps libre le dessine, je fait de la photographie, j'aime beaucoup voyager aussi car rien de
+                    mieux pour se retrouver qu'un
+                    <a href="trip-with-friends.html">bon voyage en compagnie des copains</a>.
+                </p>
+                <p>
+            </div>
+            <hr>
+        </div>
+        </div>
+
             <div class="cont-api">
 
                 <!-- SEARCH -->
@@ -54,71 +101,31 @@
                         <a href="/">
                             <img src="assets/img/resulat_01.png" alt="result 1">
                         </a>
-                        <p>Resltat1</p>
+                        <p>Configurer un serveur debian 12</p>
                     </li>
                     <li class="result">
                         <a href="/">
                             <img src="assets/img/resulat_01.png" alt="result 1">
                         </a>
-                        <p>Resltat 2</p>
+                        <p>Reussir son CCNA</p>
+                    </li>
+                    <li class="result">
+                        <a href="/">
+                            <img src="assets/img/resulat_01.png" alt="result 1">
+                        </a>
+                        <p>Randonnée</p>
                     </li>
                 </ul>
 
             </div>
 
-        </div>
-        <div>
-            <p>Salut à tous, je vous souhaite la bienvenue sur mon site web.</p>
-            <p>Diplomé de l’école Supérieure <a href="https://2iacademy.com/campus-lyon/">ISITECH</a> Lyon, j'ai
-                travaillé en tant que technicien support en alternance chez
-                <a href="https://lbint.fr/">LBINT</a>.
-            </p>
-            <p>Puis voulant me lancer dans l'auto entreprenariat je me suis réorienté dans le developpement avec les
-                formations d'OpenClassroom et Studi.</p>
-            <p>Je peux vous donner quelques de mes impressions et conseils dans le milieu ;) Thème : Graphisme, Tuto
-                Communication, Web Design, Textile et Montage Vidéo. </p>
-            <p>Sur mon temps libre le dessine, je fait de la photographie, j'aime beaucoup voyager aussi car rien de
-                mieux pour se retrouver qu'un
-                <a href="trip-with-friends.html">bon voyage en compagnie des copains</a>.
-            </p>
-            <p>
-        </div>
-        <hr>
-        </div>
+
     </section>
     <section class="section">
         <div class="container">
             <div class="columns">
                 <div id="bio">
-                    <p> Accessibilité
-                        <a href="javascript:void(0);" onclick="ft_accessibility()">
-                            <img class="animation btn_shadow" src="assets/img/icon/block.png" alt="a">
-                        </a>
 
-                    <div id="accessibility" class="accessibility">
-                        <p>Réglages couleurs</p>
-                        <a id="protanopie" href="javascript:void(0);" onclick="ft_setStyle(protanopie)">
-                            <input class="blind_button colors" type="button" value="Protanopie">
-                        </a>
-                        <a id="deuteranopie" href="javascript:void(0);" onclick="ft_setStyle(deuteranopie)">
-                            <input class="blind_button colors" type="button" value="Deuteranopie">
-                        </a>
-                        <a id="tritanopie" href="javascript:void(0);" onclick="ft_setStyle(tritanopie)">
-                            <input class="blind_button colors" type="button" value="Tritanopie">
-                        </a>
-                        <a id="achromatopsie" href="javascript:void(0);" onclick="ft_setStyle(achromatopsie)">
-                            <input class="blind_button colors" type="button" value="Achromatopsie">
-                        </a>
-                        <a id="remover" href="javascript:void(0);" onclick="ft_setStyle(remover)">
-                            <input class="blind_button colors" type="button" value="Default">
-                        </a>
-                        <hr>
-                        <div class="center">
-                            <input class="center" type="range" id="slurp" min="0" max="255" value="128">
-                            <span> Contrast : <span id="slurp_numb">Err</span></span>
-                        </div>
-
-                    </div>
                     <br>
 
                     <a class="startup" href="/index.html">Axiom City / </a> Axiom City main Hello I am 22 years old, I

@@ -1,8 +1,13 @@
 {
+  "dependencies": {
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "sqlite3": "^5.1.7"
+  },
   "name": "axiomcity",
   "version": "1.0.0",
-  "description": "<a href=\"https://axiomcity.github.io/\"> <img src=\"https://github.com/axiomcity/axiomcity.github.io/blob/main/planete_01.png\"> </a>",
-  "main": "script.js",
+  "description": "<a href=\"https://axiomcity.github.io/\"> <img src=\"https://github.com/axiomcity/axiomcity.github.io/blob/main/assets/img/icon/planete_01.png\"> </a>",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,9 +21,5 @@
   "bugs": {
     "url": "https://github.com/axiomcity/axiomcity.github.io/issues"
   },
-  "homepage": "https://github.com/axiomcity/axiomcity.github.io#readme",
-  "dependencies": {
-    "express": "^5.1.0",
-    "sqlite3": "^5.1.7"
-  }
+  "homepage": "https://github.com/axiomcity/axiomcity.github.io#readme"
 }

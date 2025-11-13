@@ -1,9 +1,24 @@
 const express = require('express');
+const helmet = require('helmet');
 const app = express();
-const userRoutes = require('./routes/users');
 
-app.use(express.json());
-app.use('/api/users', userRoutes);
+app.use(helmet.contentSecurityPolicy({
+    directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "https://trusted.cdn.com"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        imgSrc: ["'self'", "data:"],
+    }
+}));
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Serving at http://192.168.1.200:${PORT}`));
+app.get("/article=debian", (req, res) => {
+    res.send("Article sur debian");
+});
+
+app.get("/article=buntu", (req, res) => {
+    res.send("Article sur Ubuntu");
+});
+
+app.listen(3000, () => {
+    console.log("listening on http://localhost:3000");
+})
