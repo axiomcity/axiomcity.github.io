@@ -12,29 +12,29 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="navbar2">
             <div class="navbar">
                 <div>
                     <a href="index.html" alt="axiom-city-menu">
-                        <img class="icon" src="logo2.png">
+                        <img class="ico38" src="logo2.png">
                     </a>
                 </div>
-                <div class="links">
-                    <a class="link" href="langues.html">Langues</a>
-                    <a class="link" href="profil.html">Portfolio</a>
-                    <a class="link" href="builds.html">Projets</a>
-                    <a class="link" href="photos.html">Bibliothèque</a>
-                    <a class="link" class="">Login</a>
-                </div>
                 <a class="burger" class="link" href="javascript:void(0);" onclick="ft_links()">
-                    <img class="icon" src="assets/img/icon/burger.png" alt="burger-img-open">
+                    <img class="ico38" src="assets/img/icon/burger.png" alt="burger-img-open">
                 </a>
             </div>
+            <div class="links hidden">
+                <a class="link" href="langues.html">Langues</a>
+                <a class="link" href="profil.html">Portfolio</a>
+                <a class="link" href="builds.html">Projets</a>
+                <a class="link" href="photos.html">Bibliothèque</a>
+                <a class="link login-link" class="">Login</a>
+            </div>
             <div class="cont-access">
-                <a href="javascript:void(0);" onclick="ft_access()">
+                <a class="nopacity" href="javascript:void(0);" onclick="ft_access()">
                     <img class="access-anim access-btn" src="assets/img/icon/block.png" alt="a">
                 </a>
-                <div class="access">
+                <div class="access access-hidden">
                     <p>Réglages couleurs</p>
                     <a id="protanopie" href="javascript:void(0);" onclick="ft_setStyle(protanopie)">
                         <input class="blind_button colors" type="button" value="Protanopie">
@@ -51,7 +51,6 @@
                     <a id="remover" href="javascript:void(0);" onclick="ft_setStyle(remover)">
                         <input class="blind_button colors" type="button" value="Default">
                     </a>
-                    <hr>
                     <div class="center">
                         <input class="center" type="range" id="slurp" min="0" max="255" value="128">
                         <span> Contrast : <span id="slurp_numb">Err</span></span>
@@ -83,41 +82,40 @@
                 </p>
                 <p>
             </div>
-            <hr>
         </div>
         </div>
 
-            <div class="cont-api">
+        <div class="cont-api">
 
-                <!-- SEARCH -->
-                <input id="search" type="text" class="api-text" placeholder="Installer Linux...">
-                <button class="api-btn">
-                    <img src="assets/img/icon/search.png" alt="">
-                </button>
+            <!-- SEARCH -->
+            <input id="search" type="text" class="api-text" placeholder="Installer Linux...">
+            <button class="api-btn">
+                <img src="assets/img/icon/search.png" alt="">
+            </button>
 
-                <!-- RESULT -->
-                <ul class="cont-result">
-                    <li class="result">
-                        <a href="/">
-                            <img src="assets/img/resulat_01.png" alt="result 1">
-                        </a>
-                        <p>Configurer un serveur debian 12</p>
-                    </li>
-                    <li class="result">
-                        <a href="/">
-                            <img src="assets/img/resulat_01.png" alt="result 1">
-                        </a>
-                        <p>Reussir son CCNA</p>
-                    </li>
-                    <li class="result">
-                        <a href="/">
-                            <img src="assets/img/resulat_01.png" alt="result 1">
-                        </a>
-                        <p>Randonnée</p>
-                    </li>
-                </ul>
+            <!-- RESULT -->
+            <ul class="cont-result">
+                <li class="result">
+                    <a href="/">
+                        <img src="assets/img/resulat_01.png" alt="result 1">
+                    </a>
+                    <p>Configurer un serveur debian 12</p>
+                </li>
+                <li class="result">
+                    <a href="/">
+                        <img src="assets/img/resulat_01.png" alt="result 1">
+                    </a>
+                    <p>Reussir son CCNA</p>
+                </li>
+                <li class="result">
+                    <a href="/">
+                        <img src="assets/img/resulat_01.png" alt="result 1">
+                    </a>
+                    <p>Randonnée</p>
+                </li>
+            </ul>
 
-            </div>
+        </div>
 
 
     </section>

@@ -1,10 +1,16 @@
 * {
+    font-family: K2D;
     padding: 0;
     margin: 0;
     box-sizing: inherit;
     text-decoration: none;
     list-style: none;
     cursor: url("./img/icon/cursor.png"), auto;
+}
+
+@font-face {
+    font-family: K2D;
+    src: url('K2D.ttf');
 }
 
 html {
@@ -18,6 +24,10 @@ aside,
 section {
     display: block;
     background-color: #000B10;
+}
+
+.nopacity {
+    opacity: 1 !important;
 }
 
 body {
@@ -62,7 +72,7 @@ img {
 a:hover,
 input:hover,
 li:hover {
-opacity: .7;
+    opacity: .7;
 }
 
 
@@ -72,9 +82,12 @@ opacity: .7;
 /* ################### */
 .banner {
     background-color: #001520;
+    position: relative;
+    top: -22px;
 }
 
 .banner-title {
+    padding-right: 33%;
     color: #bfeaff;
     text-align: center;
 }
@@ -132,21 +145,44 @@ p {
     justify-content: space-between;
     overflow: hidden;
     position: relative;
-    height: 64px;
+    height: 42px;
 }
 
 .links {
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.access {
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    height: 150px;
+}
+
+.access-hidden {
+    height: 0;
+    opacity: 0;
 }
 
 .link {
+    display: flex;
+    align-items: center;
     color: #bfeaff;
     padding: 4px 8px;
+    height: 40px;
 }
 
-.icon {
-    height: 64px;
+.login-link {
+    width: 128px;
+    background-color: #001520;
+    justify-content: center;
+}
+
+.ico38 {
+    height: 38px;
 }
 
 .burger {
@@ -173,7 +209,7 @@ p {
     padding: 12px;
     height: 30px;
     width: 25%;
-    right: -66%;
+    right: -56%;
 }
 
 .api-text {
@@ -228,16 +264,13 @@ p {
 }
 
 
-/* ####################### */
-/* ACCESSIBILITY ASSET
-/* ####################### */
 .access-btn {
     height: 30px;
     z-index: 2;
     position: absolute;
     box-shadow: 5px 10px 5px #000;
     right: 30px;
-    top: 110px;
+    top: 80px;
 }
 
 .access-btn:hover {
@@ -246,16 +279,10 @@ p {
     opacity: 1 !important;
 }
 
-.access {
-    display: flex;
-    flex-direction: column;
-}
 
 .colors {
-    font-weight: 500;
-    font-size: 14px;
-    border-radius: 15px;
-    padding: 30px;
+    width: 90px;
+    height: 40px;
     background: #001520;
     color: #bfeaff;
     border: none;
@@ -394,14 +421,14 @@ p {
         justify-content: space-around;
         display: flex;
         align-items: end;
-        position: absolute;
         border-radius: 0;
-        top: 163px;
+        top: -30px;
         z-index: 2;
         width: 100%;
         left: 0;
         box-shadow: 0px 0px 30px #0000;
-        padding: 0;
+        background: #001520;
+        padding: 12px 0;
     }
 
     .cont-result {
@@ -409,8 +436,17 @@ p {
     }
 
     .links {
-        display: none;
-        align-items: center;
+        height: 200px;
+        text-align: left;
+        position: relative;
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hidden {
+        height: 0;
+        opacity: 0;
     }
 
     .link {
@@ -420,6 +456,9 @@ p {
 
     .banner-title {
         font-size: 10px;
+    }
+    .cont-result {
+        width: 100%;
     }
 
 }

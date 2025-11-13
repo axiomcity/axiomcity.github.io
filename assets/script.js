@@ -9,20 +9,10 @@ const site = document.getElementById('site');
 site.style.filter = localStorage.getItem('style');
 // ACCESS
 const access = document.querySelector('.access');
-access.style.display = "none"
 
 
-// #############################
-// LINKS
-// #############################
-function ft_links() {
-    if (links.style.display === "flex") {
-        links.style.display = "none";
-    } else {
-        links.style.display = "flex";
-        links.style.flexDirection = "column";
-    }
-}
+function ft_access() { access.classList.toggle('access-hidden') }
+function ft_links() { links.classList.toggle('hidden') }
 
 // Affichage temps reel des valeurs des boutons.
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,14 +29,6 @@ function ft_contrast() {
     return c;
 }
 
-// Fonction qui gere l'apparition du bouton de fonctionnalité
-function ft_access() {
-    if (access.style.display === "block") {
-        access.style.display = "none";
-    } else {
-        access.style.display = "block";
-    }
-}
 
 
 // #############################
@@ -104,10 +86,9 @@ function ft_setStyle(style) {
 
 // SEARCH API
 search = document.getElementById('search');
-query = document.getElementById('search').value;
 
 search.addEventListener('input', () => {
-    console.log("query = ", query);
+    query = search.value
     searchArticles(query);
 });
 
@@ -115,7 +96,7 @@ async function searchArticles(query) {
     if (!query) return;
 
     try {
-        const response = await fetch(`http://localhost:3000/article=${(search)}`);
+        const response = await fetch(`http://localhost:3000/article=${(query)}`);
         console.log("requete = ", query, "reponse = ", response)
         if (!response.ok) {
             throw new Error('Erreur de réseau');
