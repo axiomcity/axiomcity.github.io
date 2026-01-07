@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html id="site" class="container-media">
+<head>
+<meta charset="utf-8" />
+<meta content='width=device-width, initial-scale=1' name='viewport' />
+<title> Axiom City</title>
+<link rel="icon" sizes="16x16" href="/axiomcity/assets/icon-EHX_lG5Z.png">
+<script src="assets/script.js" defer></script>
+  <link rel="stylesheet" crossorigin href="/axiomcity/assets/index-Ds7hrsXZ.css">
+</head>
+<body>
+<header>
+<nav class="navbar2">
+<div class="navbar">
+<div>
+    <a href="index.html" alt="axiom-city-menu">
+        <img class="ico38" src="/axiomcity/assets/logo2-y2o7Nijh.png">
+    </a>
+</div>
+<a class="burger" class="link" href="javascript:void(0);" onclick="ft_links()">
+    <img class="ico38" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJEAAACUCAYAAACTFcuQAAAACXBIWXMAAAsSAAALEgHS3X78AAACEUlEQVR42u3dPU4CURSAURoSCjroKEioSFyBnSzEjo690LsCFoB/iMGexDUoihgorERBDOMtXIB5FmacU5wNTL7izX1zM6XSwVEJfsVDQESICBGBiBARIkJEICJEhIgQEYgIESEiRAQiQkSICBGBiBARIkJEICJEhIgQEYgIESEiRAQiQkSICBGBiBARIkJE8JcRXTy810L36umjT7Lu2f26VtiIrp8/W2F4s8oykg0jpJaIhCAiEYlIRCLKb0Sj+bYeehHSCcl68XJSL/Qr/uXjpjxe7CokK5sTYU4EIkJEiAgRgYgQESJCRHlws8pySUQiEpGIRCQiRISIQESIiCJF9P1lXnuy3B+SrD2abyuFjejycdMI/QhpSrL++eytYdvDxoZtDxGJSEQiynVEzTCIB/FCskFE1CzywboaOnE4PCZZJw7WVXMiF7AuYEUkIhNrRISIEBGICBEhIkQEIkJEiAgRgQtYF7AiEpGIRCQiEBH/I6LpOivfbrIKyYr9b4/z2Vs99Ebz7QnJeqd3r8X9y9B4sWuF4WS5z0g2jJAsL1pAtLwoIhGJSET5jqgWuvEg+iTrRkQ1cyLMiUBEiAgRISIQESJCRIgIRISIEBEiAhEhIkSEiEBEiAgRISIQESJCRIgIRISIEBEiAhEhIkSEiEBEiAgRISIQESJCRIgIRISIEBEiAhEhIkSEiOCnvgCDXFEJSj7y5QAAAABJRU5ErkJggg==" alt="burger-img-open">
+</a>
+</div>
+<div class="links hidden">
+<a class="link" href="langues.html">Langues</a>
+<a class="link" href="profil.html">Portfolio</a>
+<a class="link" href="builds.html">Projets</a>
+<a class="link" href="photos.html">Bibliothèque</a>
+<a class="link login-link" class="">Login</a>
+</div>
+<div class="cont-access">
+<a class="nopacity" href="javascript:void(0);" onclick="ft_access()">
+    <img class="access-anim access-btn" src="/axiomcity/assets/block-Bh96_moB.png" alt="a">
+</a>
+<div class="access access-hidden">
+    <p>Réglages couleurs</p>
+    <a id="protanopie" href="javascript:void(0);" onclick="ft_setStyle(protanopie)">
+        <input class="blind_button colors" type="button" value="Protanopie">
+    </a>
+    <a id="deuteranopie" href="javascript:void(0);" onclick="ft_setStyle(deuteranopie)">
+        <input class="blind_button colors" type="button" value="Deuteranopie">
+    </a>
+    <a id="tritanopie" href="javascript:void(0);" onclick="ft_setStyle(tritanopie)">
+        <input class="blind_button colors" type="button" value="Tritanopie">
+    </a>
+    <a id="achromatopsie" href="javascript:void(0);" onclick="ft_setStyle(achromatopsie)">
+        <input class="blind_button colors" type="button" value="Achromatopsie">
+    </a>
+    <a id="remover" href="javascript:void(0);" onclick="ft_setStyle(remover)">
+        <input class="blind_button colors" type="button" value="Default">
+    </a>
+    <div class="center">
+        <input class="center" type="range" id="slurp" min="0" max="255" value="128">
+        <span> Contrast : <span id="slurp_numb">Err</span></span>
+    </div>
+</div>
+</div>
+</nav>
+</header>
+<section class="introduction">
+<div class="banner">
+<div class="ban">
+<div class="sep2">
+    <h1>Page AxiomCity<br>
+        David BERGER</h1>
+    <div class="seo">
+        <input id="search" type="text" class="api-text" placeholder="Installer Linux...">
+        <button class="api-btn">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIdSURBVHgBtZbRbdswEIb/o9o+1C/KQ10U6IMzQbyBrQnqTtBkgmYDOxO0GySdoOkEUieoN6gLFAiSPMRBkJcEIfOTsWUqJiUZcH7AsCgc+fGOd0cJIsovzVAZfDLAiL+eeymYi8FUFE70PX5nH2SGFpK1xc9MT17h2BgMmybjAUcETZrMKpD83IygcAyDFO1V4Bafs12ZxwxUCbgwfSJ/PgN8T4Qe3WIn64pw57v8HdBm5tkM0eG8Jk9siJAgxzL2dhHh7royjU3kmY1pNyl3y+fBezlC1BOF/QpAI6sDWGXvuKCsIFpwmP81aRwi+FK+4MS2WbMAFYthqt7iaxBiU9X3YtCVH9hEBqW9lnBGKsZyzxvXhiio1zj1Rv0ghO6mK+LmkGynkro1Z7LUZvXRWkob/FsOdMTdOrn6WilYkIrFVXjjfiwNY1JeZjISRdDGpaufhh2M0VK2iBmJkQc8DUIW/2WlMmSHnDxBE8B6nLh20nMvatLfQVhUBfxdJBhbkGs3IYCtrQ7+wD9DtiFEVHbh/Io7u3f9yz/IGQ0KSTDVD7jmjvaMoB+4Bua4Yyv6GG5F1Vb/BPrGx31sriioUie2sNgYDwLtPKQTdw2s7FK8QZ7/N2tlIHWr2BrgLgb66XBtas9tV9A3+LW8pNy5KYZZFgkQ8KgW0lZNoK1AmkAKW5Iral52z87IJhG2BlkD8dPJfmDgpWRD5/fAR87H2f+aNww8AAAAAElFTkSuQmCC" alt="">
+        </button>
+    </div>
+</div>
+<div class="salut">
+    <p>Salut à tous, je vous souhaite la bienvenue sur mon site web.</p>
+    <p>Diplomé de l’école Supérieure <a href="https://2iacademy.com/campus-lyon/">ISITECH</a> Lyon, j'ai
+        travaillé en tant que technicien support en alternance chez
+        <a href="https://lbint.fr/">LBINT</a>.
+    </p>
+    <p>Puis voulant me lancer dans l'auto entreprenariat je me suis réorienté dans le developpement web
+        avec
+        les
+        formations d'OpenClassroom et Studi.</p>
+    <p>et c'est ce que je souhaite vous transmettre sur ce site ;) <br>
+        Thème : Graphisme, Tuto, Communication, Web Design, Textile et Montage Vidéo. </p>
+    <p>Sur mon temps libre le dessine, je fait de la photographie, j'aime beaucoup voyager aussi car
+        rien de
+        mieux pour se retrouver qu'un
+        <a href="trip-with-friends.html">bon voyage en compagnie des copains</a>.
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="columns">
+<div id="bio">
+    <a class="startup" href="/index.html">Axiom City / </a> Axiom City main Hello I am 22 years old, I
+    live in the Rhône with my 6 cats.
+    </p>
+    <p>
+        I like to make artistics things such as drawing, composing music, taking photos. I also like to
+        play video games.
+    </p>
+    <p>
+        I've study cumputer science in a vocational high school in computer science in Lyon, then I did
+        a BTS as an IT support technician. With the basics knowledges of IT and my transferable skills,
+        today i can work anywhere where in a IT job, and this is a good news 'cause i want to travel all
+        around the world.
+    </p>
+    <p>
+        and i also work on personnal project too like building an <a
+            href="https://unsigned.io/articles/2022_01_27_rnode-with-anything.html"
+            alt="Yagi antenna unsigned.io">Yagi antenna </a>for fun and profit.
+    </p>
+    <a href="/feedback.html" alt="contact-me-link">Send me feedback.</a>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<section class="footer">
+<small>Copyright 2024 - David Berger</small>
+</section>
+</footer>
+</body>
+</html>
