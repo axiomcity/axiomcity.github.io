@@ -1,16 +1,22 @@
 * {
-    font-family: K2D;
+    font-family: custom;
     padding: 0;
     margin: 0;
     box-sizing: inherit;
     text-decoration: none;
     list-style: none;
     cursor: url("./img/icon/cursor.png"), auto;
+    text-transform: uppercase;
 }
 
 @font-face {
     font-family: K2D;
     src: url('K2D.ttf');
+}
+
+@font-face {
+    font-family: custom;
+    src: url('custom.ttf')
 }
 
 html {
@@ -80,10 +86,16 @@ li:hover {
 /* ################### */
 /* BANNER */
 /* ################### */
-.banner {
+.ban {
     background-color: #001520;
     position: relative;
-    top: -22px;
+    padding: 2%;
+}
+
+.salut {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 }
 
 .banner-title {
@@ -198,18 +210,25 @@ p {
 /* ####################### */
 /* API ASSET
 /* ####################### */
-.cont-api {
-    position: relative;
-    top: -300px;
-    justify-content: space-around;
-    box-shadow: 0px 0px 20px #006495;
-    border-radius: 995749746px;
+.seo {
     display: flex;
-    align-items: center;
+    position: relative;
+    justify-content: space-around;
     padding: 12px;
     height: 30px;
-    width: 25%;
+    width: 200px;
     right: -56%;
+    right: 30px;
+    box-shadow: 0px 0px 20px #006495;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.sep2 {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
 }
 
 .api-text {
